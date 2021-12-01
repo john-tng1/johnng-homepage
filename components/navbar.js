@@ -13,9 +13,9 @@ import {
     IconButton,
     useColorModeValue
 } from '@chakra-ui/react'
+import { VscGithub } from 'react-icons/vsc'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub } from 'react-icons/io5'
+
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -84,14 +84,13 @@ const Navbar = props => {
             style={{ gap: 4 }}
             pl={2}
           >
-            <IoLogoGithub />
+            <VscGithub />
             Source
           </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
-          <ThemeToggleButton />
-
+          
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
